@@ -15,23 +15,24 @@
         }
     ?>
     <form action="./update_req_stagiaires.php" method="POST">
-        <label for="name">Nom: </label><input default="<?= $_GET["nom"];?>" placeholder="<?= $_GET["nom"];?>" type="text" name="name">
+        <label for="name">Nom: </label><input default="<?= $_GET["nom"];?>" value="<?= $_GET["nom"];?>" type="text" name="name">
         <br>
-        <label for="surname">Prenom: </label><input default="<?= $_GET["prenom"]; ?>" placeholder="<?= $_GET["prenom"]; ?>" type="text" name="surname">
+        <label for="surname">Prenom: </label><input default="<?= $_GET["prenom"]; ?>" value="<?= $_GET["prenom"]; ?>" type="text" name="surname">
         <br>
-        <select name="nationalite" default="<?= $_GET["nationalite"]; ?>" placeholder="" default="<?= $_GET["nationalite"]; ?>">
+        <select name="nationalite" default="<?= $_GET["nationalite"]; ?>" value="" default="<?= $_GET["nationalite"]; ?>">
             <option value="fr">Francais(e)</option>
             <option value="en">Anglais(e)</option>
         </select>
         <br>
-        <label for="photo">url photo</label><input type="text" name="photo" default="<?= $_GET["chemin_photo"]; ?>" placeholder="<?= $_GET["chemin_photo"]; ?>">
+        <label for="photo">url photo</label><input type="text" name="photo" default="<?= $_GET["chemin_photo"]; ?>" value="<?= $_GET["chemin_photo"]; ?>">
         <br>
-        <select name="formations" default="<?= $_GET["id_formation"]; ?>" placeholder="<?= $_GET["id_formation"]; ?>">
+        <select name="formations" default="<?= $_GET["id_formation"]; ?>" value="<?= $_GET["id_formation"]; ?>">
         <?php
             require("./get_formations.php");
             foreach($formations as $formation) {
                 echo '<option value="', $formation['id'], '">', $formation['libelle'], '</option>';
             }
+            if ()
         ?>
         </select>
         <br>
