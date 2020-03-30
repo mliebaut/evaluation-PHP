@@ -36,7 +36,14 @@
                     '<td>', $stagiaire['nationalite'], '</td>',
                     '<td> <img src="', $stagiaire['chemin_photo'], '"></img></td>',
                     '<td>', $stagiaire['id_formation'], '</td>',
-                    '<td><a href="./update_stagiaire.php?id=', $stagiaire['id_user'],'">🖊️</a></td>',
+                    '<td><a href="./update_stagiaire.php',
+                        '?id_user=', $stagiaire['id_user'],
+                        '&nom=', $stagiaire['nom'],
+                        '&prenom=',$stagiaire['prenom'],
+                        '&nationalite=',$stagiaire['nationalite'],
+                        '&chemin_photo=',$stagiaire['chemin_photo'],
+                        '&id_formation=',$stagiaire['id_formation'],
+                        '">🖊️</a></td>',
                     '</tr>';
                 }
             ?>
