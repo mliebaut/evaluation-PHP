@@ -32,7 +32,6 @@
             foreach($formations as $formation) {
                 echo '<option value="', $formation['id'], '">', $formation['libelle'], '</option>';
             }
-            if ()
         ?>
         </select>
         <br>
